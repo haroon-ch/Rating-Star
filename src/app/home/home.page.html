@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  
+ <ul class="list-inline rating-list" *ngFor="let star of stars; let i= index">
+    <li (click)="countStar(star)" [ngClass]="{'selected': (star <= selectedValue)}" (mouseover)="addClass(star)"
+         (mouseout)="removeClass()"> <span class="material-icons"> <ion-icon name="star-outline"></ion-icon> </span>
+    </li>
+</ul>
+
+<h1>stars: {{selectedValue}}</h1>
+
+
+
+</ion-content>
